@@ -1,40 +1,31 @@
-<div align="center">
-
 # 👋 Hi, I'm Harsha Teja
 
 ### Product Analytics • Data Analytics • Machine Learning • Information Systems
 
-**Turning data into decisions and models into usable products.**
+> **Turning data into decisions and models into usable products.**
 
-M.S. Information Systems @ Stevens Institute of Technology | GPA: 3.8/4.0
-
-<br>
-
-![Python](https://img.shields.io/badge/Python-Data%20%26%20ML-blue?style=flat-square&logo=python&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Analytics-blue?style=flat-square&logo=postgresql&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-Visualization-orange?style=flat-square&logo=tableau&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-APIs-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Deployment-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-Cloud-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
-
-</div>
+🎓 M.S. Information Systems — Stevens Institute of Technology  
+📊 GPA: **3.8 / 4.0**  
+💼 Software Engineering + Analytics experience  
+🎯 Product Analyst • Data Analyst • Business Analyst • Technical Product
 
 ---
 
 ## 👨‍💻 About Me
 
-I'm an **Information Systems graduate from Stevens Institute of Technology** with professional experience spanning **software engineering, data analysis, business operations, and product-focused problem solving**.
+I'm an **Information Systems graduate from Stevens Institute of Technology** with experience across **software engineering, data analytics, business operations, and product-focused problem solving**.
 
-I enjoy working at the intersection of **data, technology, and business** — turning messy datasets and ambiguous problems into measurable insights, analytical systems, and better product decisions.
+I enjoy working at the intersection of **data, technology, and business** — transforming complex datasets and ambiguous problems into measurable insights, analytical systems, and better decisions.
 
-My recent work includes building:
+My work spans:
 
-- An end-to-end **fraud detection and monitoring platform**
-- A calibrated **credit risk decision-support system**
-- A **Retrieval-Augmented Generation (RAG)** document intelligence application
-- REST APIs, interactive dashboards, ML monitoring pipelines, and cloud-based applications
-
-> 🎯 **Current focus:** Product Analyst • Data Analyst • Business Analyst • Technical Product • Applied Analytics
+- 📊 Product and business analytics
+- 🤖 Machine learning and predictive modeling
+- 🧠 AI and Retrieval-Augmented Generation
+- ⚙️ Data pipelines and REST APIs
+- 📈 Interactive dashboards and reporting
+- 🔍 Explainable AI and model monitoring
+- ☁️ Cloud and containerized deployment
 
 ---
 
@@ -42,16 +33,18 @@ My recent work includes building:
 
 ## 🛡️ Fraud Detection Platform
 
-### From 1.75M transactions → real-time fraud decisions
+### 1.75M transactions → real-time fraud decisions
 
 **Python • XGBoost • PostgreSQL • FastAPI • Streamlit • SHAP • Docker • GitHub Actions**
 
-Built an end-to-end fraud detection platform covering the complete ML lifecycle — **data ingestion, leakage-safe feature engineering, model development, business optimization, explainability, serving, monitoring, testing, governance, and cloud deployment**.
+Built an end-to-end fraud detection platform covering the complete machine learning lifecycle:
 
-### 📊 Results at a Glance
+**Data Ingestion → Feature Engineering → Modeling → Business Optimization → Explainability → API → Dashboard → Monitoring → CI/CD → Cloud Deployment**
+
+### 📊 Results
 
 | Metric | Result |
-|:---|---:|
+|---|---:|
 | Transactions Processed | **1,754,155** |
 | ROC-AUC | **0.8866** |
 | PR-AUC | **0.6613** |
@@ -63,87 +56,101 @@ Built an end-to-end fraud detection platform covering the complete ML lifecycle 
 ### 🔍 What I Built
 
 - Designed and validated an ingestion pipeline for **1.75M+ transactions**
-- Engineered customer velocity, spending, and terminal-risk features
+- Engineered customer velocity, spending behavior, and terminal-risk features
 - Implemented a **7-day fraud-label availability delay** to prevent target leakage
 - Trained and evaluated an **XGBoost champion model**
-- Compared supervised fraud detection against an **Isolation Forest** benchmark
-- Optimized the production threshold using explicit false-positive and false-negative costs
-- Evaluated **Precision@K and Recall@K** for limited investigation capacity
-- Added global and transaction-level **SHAP explanations**
-- Served predictions through a **FastAPI REST API**
-- Built an investigator-facing **Streamlit dashboard**
-- Implemented feature, prediction-score, and delayed-label performance monitoring
-- Created unified model health states: `HEALTHY → MONITOR → REVIEW REQUIRED`
-- Added **pytest + GitHub Actions CI**
-- Containerized the system using **Docker**
-- Deployed the API and dashboard to the cloud
-- Documented model governance, monitoring policies, and known limitations
+- Benchmarked supervised detection against **Isolation Forest**
+- Optimized the operating threshold using false-positive and false-negative business costs
+- Evaluated **Precision@K and Recall@K** for limited investigator capacity
+- Added global and transaction-level **SHAP explainability**
+- Built a production-style **FastAPI scoring service**
+- Developed an investigator-facing **Streamlit dashboard**
+- Implemented feature drift monitoring using **Population Stability Index (PSI)**
+- Monitored prediction-score distributions and delayed-label model performance
+- Created unified model-health states:
+  `HEALTHY → MONITOR → REVIEW REQUIRED`
+- Added automated testing with **pytest**
+- Integrated **GitHub Actions CI**
+- Containerized the API and dashboard using **Docker**
+- Deployed the application to the cloud
+- Added model governance and monitoring documentation
 
 ### 🏗️ Architecture
 
 ```text
-Transaction Data
-       │
-       ▼
-   PostgreSQL
-       │
-       ▼
-Feature Engineering
-       │
-       ├── Customer Behavior
-       └── Delayed Terminal Risk
-       │
-       ▼
-   XGBoost Model
-       │
-       ├── Business Threshold Optimization
-       ├── SHAP Explainability
-       └── Model Monitoring
-       │
-       ▼
- Persisted Artifacts
-       │
-   ┌───┴────┐
-   ▼        ▼
-FastAPI  Streamlit
-   │
-   ▼
-Cloud Deployment
+                  Transaction Data
+                         │
+                         ▼
+                    PostgreSQL
+                         │
+                         ▼
+                 Feature Engineering
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+      Customer Behavior      Delayed Terminal
+          Features             Risk Features
+              │                     │
+              └──────────┬──────────┘
+                         ▼
+                    XGBoost
+                         │
+            ┌────────────┼────────────┐
+            ▼            ▼            ▼
+        Threshold       SHAP       Monitoring
+       Optimization  Explainability
+            │
+            ▼
+       Model Artifacts
+            │
+       ┌────┴────┐
+       ▼         ▼
+    FastAPI   Streamlit
+       │         │
+       └────┬────┘
+            ▼
+      Cloud Deployment
 
-CI/CD & Quality
-      │
-      └── Pytest → GitHub Actions → Docker
+
+Engineering Quality
+       │
+       ▼
+Pytest → GitHub Actions → Docker
 ```
 
-**Key takeaway:** This project focuses not only on predictive performance, but on how an ML model can be **evaluated, explained, deployed, tested, monitored, and governed as a complete system**.
+### 💡 Key Takeaway
+
+This project goes beyond training a classifier. It demonstrates how a machine learning model can be **evaluated, explained, deployed, tested, monitored, and governed as an operational ML system**.
 
 ---
 
 ## 💳 Credit Risk Forecasting & Decision Support
 
-**Python • scikit-learn • SHAP • Streamlit • Probability Calibration**
+**Python • scikit-learn • SHAP • Streamlit • Machine Learning**
 
-Built an end-to-end credit risk decision-support system using approximately **30,000 customer records**, covering data validation, feature engineering, model comparison, calibration, threshold optimization, explainability, and deployment.
+Built an end-to-end credit risk decision-support system using approximately **30,000 customer records**, covering data validation, feature engineering, model comparison, probability calibration, threshold optimization, explainability, and deployment.
 
 ### 📈 Results
 
 | Metric | Baseline | Improved |
-|:---|---:|---:|
+|---|---:|---:|
 | ROC-AUC | 0.7474 | **0.7770** |
 | PR-AUC | 0.5157 | **0.5558** |
 | Brier Score | 0.1766 | **0.1361** |
 
-### 🔍 What I Built
+### Highlights
 
 - Improved **ROC-AUC from 0.7474 → 0.7770**
 - Improved **PR-AUC from 0.5157 → 0.5558**
 - Achieved **0.7847 ± 0.0085 ROC-AUC** with 5-fold cross-validation
 - Reduced Brier score from **0.1766 → 0.1361** through probability calibration
 - Applied cost-sensitive threshold optimization
-- Added global and customer-level **SHAP explainability**
-- Built an interactive **Streamlit risk-assessment dashboard**
+- Added global and customer-level **SHAP explanations**
+- Developed an interactive **Streamlit risk-assessment dashboard**
 
-**Key takeaway:** Strong classification alone isn't enough for decision systems — **calibration, explainability, and decision thresholds matter too**.
+### 💡 Key Takeaway
+
+Strong classification performance alone isn't enough for decision systems — **probability calibration, explainability, and business thresholds matter too**.
 
 ---
 
@@ -151,127 +158,79 @@ Built an end-to-end credit risk decision-support system using approximately **30
 
 **Python • FastAPI • LangChain • FAISS • AWS • RAG**
 
-Developed an AI-powered document intelligence application for asking natural-language questions across collections of unstructured documents.
+Developed an AI-powered document intelligence platform that enables natural-language question answering across collections of unstructured documents.
 
-### 🔍 What I Built
+### Highlights
 
-- Designed document ingestion and preprocessing workflows
+- Designed document ingestion and preprocessing pipelines
 - Implemented **Retrieval-Augmented Generation (RAG)**
 - Generated embeddings for semantic document representation
 - Used **FAISS vector search** for information retrieval
-- Developed REST APIs with **FastAPI**
+- Built REST APIs using **FastAPI**
 - Added validation and data-quality checks
 - Integrated **AWS S3** for cloud-based storage
-- Evaluated retrieval quality and investigated poor search results
-- Documented architecture, technical workflows, and improvement opportunities
+- Evaluated retrieval quality and investigated search-quality issues
+- Documented system architecture and technical workflows
 
-**Key takeaway:** Effective AI applications depend on the entire retrieval pipeline — not just the language model.
+### 💡 Key Takeaway
+
+Reliable AI applications depend on the complete **data → retrieval → context → generation** pipeline, not just the language model.
 
 ---
 
-# 🧠 How I Think About Problems
+# 🧠 How I Approach Problems
 
-I like working across the complete decision-making lifecycle:
+I like working across the full decision-making lifecycle:
 
 ```text
 Business Problem
       ↓
-Define Requirements
+Requirements
       ↓
-Collect & Validate Data
+Data Collection & Validation
       ↓
-Analyze Behavior
+Analysis
       ↓
-Build Model / Insight
+Model / Insight
       ↓
-Translate Into Decision
+Business Decision
       ↓
-Deploy or Operationalize
+Operationalization
       ↓
-Measure Outcomes
+Measurement
       ↓
-Improve
+Iteration
 ```
 
-This allows me to work between **business stakeholders, analysts, engineers, and product teams** rather than treating analytics as an isolated technical task.
+This allows me to work across **business, analytics, engineering, and product teams** rather than treating analytics as an isolated technical activity.
 
 ---
 
 # 🛠️ Technical Toolkit
 
-<table>
-<tr>
-<td valign="top" width="50%">
-
 ### 📊 Data & Analytics
 
-`Python`  
-`SQL`  
-`Pandas`  
-`NumPy`  
-`Excel`  
-`EDA`  
-`Statistical Analysis`  
-`Data Mining`
+`Python` `SQL` `Pandas` `NumPy` `Excel` `EDA` `Statistical Analysis` `Data Mining`
 
 ### 📈 Visualization & Reporting
 
-`Tableau`  
-`Power BI`  
-`Matplotlib`  
-`Dashboard Development`  
-`Executive Reporting`  
-`Excel VBA`
+`Tableau` `Power BI` `Matplotlib` `Streamlit` `Dashboard Development` `Executive Reporting` `Excel VBA`
 
-### 🗄️ Data & Databases
+### 🗄️ Databases & Data Engineering
 
-`PostgreSQL`  
-`MySQL`  
-`DynamoDB`  
-`ETL`  
-`Data Validation`  
-`Data Transformation`  
-`Query Optimization`
-
-</td>
-
-<td valign="top" width="50%">
+`PostgreSQL` `MySQL` `DynamoDB` `ETL` `Data Transformation` `Data Validation` `Query Optimization`
 
 ### 🤖 Machine Learning & AI
 
-`scikit-learn`  
-`XGBoost`  
-`SHAP`  
-`LangChain`  
-`FAISS`  
-`RAG`  
-`NLP`  
-`Predictive Modeling`
+`scikit-learn` `XGBoost` `SHAP` `LangChain` `FAISS` `RAG` `NLP` `Predictive Modeling` `Anomaly Detection`
 
 ### ⚙️ Engineering & Cloud
 
-`FastAPI`  
-`REST APIs`  
-`Docker`  
-`Git`  
-`GitHub Actions`  
-`AWS S3`  
-`AWS Lambda`
+`FastAPI` `REST APIs` `Docker` `Git` `GitHub Actions` `AWS S3` `AWS Lambda` `pytest`
 
 ### 📋 Product & Business
 
-`Product Analysis`  
-`Requirements Gathering`  
-`User Stories`  
-`Stakeholder Management`  
-`Process Improvement`  
-`Agile / Scrum`  
-`Jira`  
-`SDLC`
-
-</td>
-</tr>
-</table>
+`Product Analysis` `Requirements Gathering` `User Stories` `Stakeholder Management` `Process Improvement` `Product Documentation` `Agile` `Scrum` `Jira` `SDLC`
 
 ---
 
@@ -281,15 +240,15 @@ This allows me to work between **business stakeholders, analysts, engineers, and
 
 **Nov 2022 – Dec 2023 | India**
 
-Worked across **technology, data, and business operations**, supporting reporting, operational analysis, troubleshooting, and product/process improvements.
+Worked at the intersection of **technology, data, and business operations**, supporting analytics, reporting, troubleshooting, and product/process improvements.
 
-- Analyzed operational datasets using **SQL and Excel** to support business decisions
+- Analyzed operational datasets using **SQL and Excel** to support reporting and business decisions
 - Performed data validation and reconciliation across multiple data sources
-- Investigated recurring data-quality issues using structured **root-cause analysis**
-- Collaborated with cross-functional stakeholders to understand requirements
-- Supported product and process improvement initiatives
+- Investigated recurring data-quality issues through structured **root-cause analysis**
+- Collaborated with cross-functional stakeholders to gather and understand requirements
+- Supported product and process-improvement initiatives
 - Created workflow, validation, and process documentation
-- Independently investigated and resolved operational issues while managing competing priorities
+- Independently investigated and resolved operational issues while managing multiple priorities
 
 ---
 
@@ -299,16 +258,14 @@ Worked across **technology, data, and business operations**, supporting reportin
 
 **Master of Science in Information Systems**
 
-📊 **GPA:** 3.8 / 4.0  
-🎓 **Graduated:** December 2025
+**GPA:** 3.8 / 4.0  
+**Graduated:** December 2025
 
 ---
 
 # 🏆 Certification
 
-## Goldman Sachs Software Engineering Virtual Experience
-
-Focus areas:
+### Goldman Sachs Software Engineering Virtual Experience
 
 `API Security` • `Risk Detection` • `Software Engineering`
 
@@ -316,77 +273,69 @@ Focus areas:
 
 # 💡 What I Bring
 
-My strength is connecting **technical analysis with business outcomes**.
+I combine **business understanding, analytical thinking, and technical execution**.
 
 ```text
-              BUSINESS
-                 ▲
-                / \
-               /   \
-              /     \
-             /       \
-            /         \
-           /           \
-          ▼─────────────▼
-        DATA       TECHNOLOGY
+Business Question
+       ↓
+Requirements
+       ↓
+Data
+       ↓
+Analysis
+       ↓
+Insight / Model
+       ↓
+Product Decision
+       ↓
+Measurable Impact
 ```
 
-I can move between:
+My background allows me to move between:
 
-**SQL Analysis → Python Automation → Dashboards → Machine Learning → APIs → Product Requirements → Stakeholder Communication**
+**SQL Analysis → Python → Dashboards → Machine Learning → APIs → Product Requirements → Stakeholder Communication**
 
-while keeping the original business question in focus.
+while keeping the underlying **business problem** at the center.
 
 ---
 
 # 📊 GitHub Activity
 
-<div align="center">
-
-![Harsha's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Harshateja01&show_icons=true&hide_border=true&rank_icon=github)
+![Harsha's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Harshateja01&show_icons=true&hide_border=true)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Harshateja01&layout=compact&hide_border=true)
 
-</div>
-
-> GitHub language statistics represent repository code composition and are not a measure of overall proficiency.
+> GitHub language statistics represent repository code composition rather than overall technical proficiency.
 
 ---
 
-# 🎯 Currently Exploring
+# 🔭 Currently Exploring
 
 I'm particularly interested in problems involving:
 
 `Product Analytics` • `Fraud & Risk Analytics` • `Customer Behavior` • `Experimentation` • `Machine Learning` • `AI Products` • `Decision Systems` • `Data Visualization`
 
-### Opportunities I'm Interested In
+---
 
-**Product Analyst • Data Analyst • Business Analyst • Technical Product • Applied Analytics**
+# 🎯 Opportunities I'm Interested In
 
-I'm particularly interested in teams where analytics is used not just for reporting, but to **shape product decisions, improve systems, and drive measurable outcomes**.
+I'm currently exploring opportunities in:
+
+### Product Analyst • Data Analyst • Business Analyst • Technical Product • Applied Analytics
+
+I'm particularly interested in teams where data is used not only for reporting, but to **shape product decisions, improve systems, understand users, and drive measurable outcomes**.
 
 ---
 
 # 📫 Let's Connect
 
-I'm always interested in conversations around **analytics, product development, machine learning, and data-driven decision making**.
+I'm always interested in conversations around **analytics, product development, machine learning, AI, and data-driven decision making**.
 
-<div align="center">
-
-### Let's turn data into better decisions.
-
-💼 **LinkedIn:** https://www.linkedin.com/in/harsha-teja-arikatla-1b4a761aa/
-
-📧 **Email:** harshateja565@gmail.com
-
-</div>
+**LinkedIn:** https://www.linkedin.com/in/harsha-teja-arikatla-1b4a761aa/  
+**Email:** harshateja565@gmail.com
 
 ---
 
-<div align="center">
-
 ### Thanks for visiting! 👋
 
-`Data → Insight → Decision → Impact`
-
-</div>
+**Data → Insight → Decision → Impact**
