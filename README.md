@@ -375,7 +375,7 @@ I'm always interested in conversations around **analytics, product development, 
 
 ### Let's turn data into better decisions.
 
-💼 **LinkedIn:** [YOUR_LINKEDIN_URL](https://www.linkedin.com/in/harsha-teja-arikatla-1b4a761aa/)
+💼 **LinkedIn:** https://www.linkedin.com/in/harsha-teja-arikatla-1b4a761aa/
 
 📧 **Email:** harshateja565@gmail.com
 
